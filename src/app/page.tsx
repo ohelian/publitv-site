@@ -3,12 +3,12 @@ import { Hero } from "./components/Hero";
 import { RevealText } from "./components/Reveal";
 
 const estabelecimentos = [
-  { src: "/academia.png", nome: "Academias" },
-  { src: "/farmacia.png", nome: "Farmácias" },
-  { src: "/acougue.png", nome: "Açougues" },
-  { src: "/loja-suplementos.png", nome: "Lojas de suplementos" },
-  { src: "/loja-conveniencia.png", nome: "Lojas de conveniência" },
-  { src: "/posto-gasolina.png", nome: "Postos de combustível" },
+  { src: "/academia.webp", nome: "Academias" },
+  { src: "/farmacia.webp", nome: "Farmácias" },
+  { src: "/acougue.webp", nome: "Açougues" },
+  { src: "/loja-suplementos.webp", nome: "Lojas de suplementos" },
+  { src: "/loja-conveniencia.webp", nome: "Lojas de conveniência" },
+  { src: "/posto-gasolina.webp", nome: "Postos de combustível" },
 ];
 
 const estabelecimentosTrack = [...estabelecimentos, ...estabelecimentos];
@@ -148,7 +148,7 @@ export default function Home() {
               </h2>
               <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-3xl">
                 <Image
-                  src="/sobre.png"
+                  src="/sobre.webp"
                   alt="Cliente vendo ofertas exibidas na tela publiTV dentro da loja"
                   fill
                   sizes="(min-width: 1024px) 26rem, 100vw"

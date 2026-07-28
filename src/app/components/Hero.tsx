@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Reveal, RevealText } from "./Reveal";
 
 const slides = [
-  { src: "/loja-conveniencia.png", alt: "Tela publiTV em loja de conveniência" },
-  { src: "/posto-gasolina.png", alt: "Tela publiTV em posto de gasolina" },
-  { src: "/acougue.png", alt: "Tela publiTV em açougue" },
-  { src: "/academia.png", alt: "Tela publiTV em academia" },
-  { src: "/loja-suplementos.png", alt: "Tela publiTV em loja de suplementos" },
-  { src: "/farmacia.png", alt: "Tela publiTV em farmácia" },
+  { src: "/loja-conveniencia.webp", alt: "Tela publiTV em loja de conveniência" },
+  { src: "/posto-gasolina.webp", alt: "Tela publiTV em posto de gasolina" },
+  { src: "/acougue.webp", alt: "Tela publiTV em açougue" },
+  { src: "/academia.webp", alt: "Tela publiTV em academia" },
+  { src: "/loja-suplementos.webp", alt: "Tela publiTV em loja de suplementos" },
+  { src: "/farmacia.webp", alt: "Tela publiTV em farmácia" },
 ];
 
 const track = [...slides, ...slides];
@@ -18,7 +18,7 @@ export function Hero() {
       {/* Nav — fora do card do degradê */}
       <div className="flex items-center justify-between px-3 py-4 sm:px-6 sm:py-5">
         <Image
-          src="/logo-publitv.png"
+          src="/logo-publitv.webp"
           alt="publiTV"
           width={140}
           height={47}
@@ -77,14 +77,14 @@ export function Hero() {
             <span className="relative ml-2 inline-block h-9 w-9 align-[-0.2em] sm:h-11 sm:w-11">
               <span className="icon-arc absolute inset-0">
                 <Image
-                  src="/circle-cifra.png"
+                  src="/circle-cifra.webp"
                   alt=""
                   fill
                   sizes="44px"
                   className="icon-swap-a object-contain"
                 />
                 <Image
-                  src="/circle-tv.png"
+                  src="/circle-tv.webp"
                   alt=""
                   fill
                   sizes="44px"
