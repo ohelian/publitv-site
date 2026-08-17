@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora, Montserrat } from "next/font/google";
+import { Analytics } from "./components/Analytics";
 import "./globals.css";
 
 const sora = Sora({
@@ -30,6 +31,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
+        <Analytics />
       </body>
     </html>
   );

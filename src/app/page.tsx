@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { Hero } from "./components/Hero";
 import { RevealText } from "./components/Reveal";
+import { AvisoCobranca, ResumoCobranca } from "./components/AvisoCobranca";
+import { CheckoutButton } from "./components/CheckoutButton";
+import { EMAIL_CONTATO } from "./lib/contato";
 
 const estabelecimentos = [
   { src: "/academia.webp", nome: "Academias" },
@@ -298,21 +301,63 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Planos */}
+        <section id="planos" className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
+          <div className="text-center">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-cyan">
+              Quanto custa
+            </p>
+            <h2 className="font-heading mx-auto max-w-2xl text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl">
+              <RevealText text="Um aparelho, uma assinatura, nenhuma surpresa." />
+            </h2>
+          </div>
+
+          <div className="mx-auto mt-14 max-w-xl rounded-3xl border border-border bg-surface p-6 sm:p-10">
+            <div className="text-center">
+              <h3 className="font-heading text-xl font-semibold text-foreground">
+                TV Box publiTV + assinatura
+              </h3>
+              <p className="mt-3 text-sm leading-6 text-muted">
+                O aparelho é seu. A assinatura mantém as telas rodando, com
+                curadoria e atualização do conteúdo todos os dias.
+              </p>
+            </div>
+
+            <div className="mt-8">
+              <AvisoCobranca />
+            </div>
+
+            <div className="mt-8 text-center">
+              <CheckoutButton origem="planos" className="w-full sm:w-auto" />
+              <p className="mt-4 text-xs leading-5 text-muted">
+                Você vai para o checkout seguro do Stripe para concluir o
+                pagamento.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA final */}
         <section id="contato" className="mx-auto max-w-6xl px-6 py-24 text-center sm:py-32">
           <h2 className="font-heading mx-auto max-w-2xl text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl">
             <RevealText text="Vamos colocar sua marca na tela certa, do jeito certo." />
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted">
-            Conta pra gente sobre o seu negócio e a gente mostra como o
-            ecossistema publiTV se encaixa nele.
+            A tela, o conteúdo e a gestão — tudo pronto pra funcionar assim que
+            a TV Box chegar.
           </p>
-          <a
-            href="mailto:contato@publitv.com.br"
-            className="font-heading mt-10 inline-block rounded-full bg-cyan px-8 py-3 text-sm font-semibold text-navy-deep transition hover:brightness-110"
-          >
-            Falar com a publiTV
-          </a>
+
+          <ResumoCobranca className="mx-auto mt-8 max-w-xl" />
+
+          <div className="mt-8 flex flex-col items-center gap-5">
+            <CheckoutButton origem="final" />
+            <a
+              href={`mailto:${EMAIL_CONTATO}`}
+              className="text-sm text-muted underline underline-offset-4 transition hover:text-foreground"
+            >
+              Prefere conversar antes? Fale com a publiTV
+            </a>
+          </div>
         </section>
       </main>
 

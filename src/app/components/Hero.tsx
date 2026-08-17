@@ -25,7 +25,7 @@ export function Hero() {
           priority
           className="h-6 w-auto sm:h-7"
         />
-        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-white/70 sm:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-white/70 md:flex">
           <a
             href="#diferencial"
             className="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white"
@@ -43,6 +43,12 @@ export function Hero() {
             className="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white"
           >
             Segmentos
+          </a>
+          <a
+            href="#planos"
+            className="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white"
+          >
+            Planos
           </a>
         </nav>
         <a
@@ -98,8 +104,11 @@ export function Hero() {
             indoor premium pro seu negócio.
           </p>
           <div className="mt-8 flex flex-nowrap gap-3">
+            {/* Leva ao preço, não direto ao Stripe: a RF-05 exige que valor,
+                início da mensalidade e prazo estejam visíveis antes do clique
+                de compra — e no hero eles não estão. */}
             <a
-              href="#contato"
+              href="#planos"
               className="font-heading whitespace-nowrap rounded-full bg-cyan px-6 py-3 text-sm font-semibold text-navy-deep transition hover:brightness-110"
             >
               Quero a publiTV
